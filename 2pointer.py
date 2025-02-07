@@ -10,11 +10,11 @@ def reverseWords_manual(array):
         
         else:#pega do ponteiro l até o ponteiro r (palavra)
             res += array[l:r+1][::-1] #inverte a palavra
-            r += 1
-            l = r
+            r += 1 #move o r para o inicio da outra palavra
+            l = r #coloca o ponteiro l na mesma posicao do r
 
-    res += ' '
-    res += array[l:r][::-1]
+    res += ' '  #adiciona um espaco na ultima palavra
+    res += array[l:r][::-1] #inverte a ultima palavra
 
     print(res)
 
